@@ -14,7 +14,7 @@
                 Digite um CPF valido
               </div>
               <label for="floatingInput">Digite o seu CPF</label>
-               <app-button class="button" (click)="nextStep()" [disable]="submitted && clientForm.invalid">Abra a sua conta</app-button>
+               <app-button class="button" (click)="submitForm()" [disable]="submitted && clientForm.invalid">Abra a sua conta</app-button>
             </div>
           </form>
         </article>
