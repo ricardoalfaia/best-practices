@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './components/button/button.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     ButtonComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    CardComponent
   ],
   imports: [
     CommonModule
@@ -17,7 +19,8 @@ import { HeaderComponent } from './components/header/header.component';
   exports: [
     ButtonComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    CardComponent
   ]
 })
 export class SharedModule { }
