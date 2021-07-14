@@ -1,0 +1,9 @@
+{
+  "accounts": [
+    {"accountId": "1", "name": "Ricardo", "cpf": "019.100.100.48", "email": "ricardo@santander.com" }
+  ],
+  "articles": [
+    {"id": "1", "title": "Tarifa zero no pacote de serviços²", "description": "Basta receber R$ 1.000 mensais no Santander e realizar o pagamento de pelo menos 1 conta todo mês pelos canais digitais."},
+    {"id": "2", "title": "Cartão SX com anuidade zero³", "description": "Ao cadastrar e manter o CPF e celular como chaves Pix no Santander ou acumulando R$100 em compras por fatura."}
+  ]
+}

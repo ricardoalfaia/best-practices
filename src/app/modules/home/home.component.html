@@ -1,15 +1,20 @@
 <section class="banner">
-  <section class="container">
+  <section class="container h-100">
     <div class="row h-100">
       <div class="col-12 d-flex justify-content-end align-items-center h-100">
         <article class="banner-form">
           <h1>Abra sua conta no banco mais vigoroso do Brasiiiilll!!</h1>
           <h2>10 dias sem juros no limite da conta¹, cartão com anuidade zero e muito mais.</h2>
-          <form>
-            <div class="form-floating mb-3 d-flex justify-content-space-between align-items-center">
-              <input type="cpf" class="form-control" id="floatingInput" placeholder="000.000.000-00">
+          <form [formGroup]="clientForm">
+            <div class="form-floating mb-3 d-flex justify-content-space-between align-items-center position-relative">
+              <input type="text" formControlName="cpf" class="form-control" placeholder="000.000.000-00" mask="000.000.000-00"
+              [ngClass]="{ 'is-invalid': submitted && clientForm.controls.cpf.errors }"
+              id="floatingInput" required>
+              <div *ngIf="submitted && clientForm.controls.cpf.errors" class="invalid-feedback">
+                Digite um CPF valido
+              </div>
               <label for="floatingInput">Digite o seu CPF</label>
-              <app-button  class="button">Abra a sua conta</app-button>
+               <app-button class="button" (click)="nextStep()" [disable]="submitted && clientForm.invalid">Abra a sua conta</app-button>
             </div>
           </form>
         </article>
@@ -17,9 +22,13 @@
     </div>
   </section>
 </section>
-<section>
-  <app-card
-  title="Tarifa zero no pacote de serviços²"
-  description="Basta receber R$ 1.000 mensais no Santander e realizar o pagamento de pelo menos 1 conta todo mês pelos canais digitais."
-  ></app-card>
+<section class="container">
+  <h2 class="text-center mt-4">Conta Confia com Cartão SX</h2>
+
+  <article class="row mb-4">
+    <app-card class="col-6" *ngFor="let article of articles"
+    [title]="article.title"
+    [description]="article.description" ></app-card>
+  </article>
+
 </section>

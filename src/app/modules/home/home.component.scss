@@ -1,7 +1,7 @@
 .banner {
   margin-top: 28px;
   background-image: url(../../../assets/images/banner-desktop.jpg);
-  height: calc(100vh - 60px);
+  height: 480px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 30%;
@@ -39,6 +39,10 @@
       margin-left: 14px;
       width: 250px;
       height: 56px;
+    }
+    .invalid-feedback {
+      position: absolute;
+      bottom: -20px;
     }
   }
 }
